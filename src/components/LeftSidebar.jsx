@@ -13,7 +13,7 @@ import {
   updateDoc,
   where,
 } from "firebase/firestore";
-import { db } from "../config/firebase";
+import { db, logout } from "../config/firebase";
 import { AppContext } from "../context/AppContext";
 import { toast } from "react-toastify";
 
@@ -172,7 +172,9 @@ const LeftSidebar = () => {
                 Edit Profile
               </p>
               <hr className="border-none h-[1px] bg-[#a4a4a4] mx-0 my-2" />
-              <p className="cursor-pointer text-sm">Logout</p>
+              <p onClick={() => logout()} className="cursor-pointer text-sm">
+                Logout
+              </p>
             </div>
           </div>
         </div>
